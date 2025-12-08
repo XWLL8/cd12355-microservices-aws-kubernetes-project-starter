@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: postgresql
-        image: postgres:latest
+        image: postgres:14
         env:
         - name: POSTGRES_DB
           value: mydatabase
