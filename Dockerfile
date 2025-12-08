@@ -1,4 +1,4 @@
-FROM python:3.10-slim-bookworm
+FROM public.ecr.aws/docker/library/python:3.10-slim-bookworm
 
 # Set the working directory
 WORKDIR /app
