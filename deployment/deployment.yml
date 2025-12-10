@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: coworking
-        image: <PUT YOUR ECR IMAGE HERE>
+        image: 296062569552.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics
         imagePullPolicy: Always
         ports:
         - containerPort: 5153
@@ -38,7 +38,7 @@ spec:
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: coworking-secret
+              name: db-password
               key: DB_PASSWORD
         readinessProbe:
           httpGet:
