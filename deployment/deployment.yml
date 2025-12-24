@@ -17,6 +17,7 @@ metadata:
   name: coworking
 spec:
   replicas: 1
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       service: coworking
@@ -27,7 +28,7 @@ spec:
     spec:
       containers:
       - name: coworking
-        image: 296062569552.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics
+        image: 296062569552.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics:v3
         imagePullPolicy: Always
         ports:
         - containerPort: 5153
